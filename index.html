@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Gaudete Band | Professional Music - Complete Emotion">
+<title>Gaudete Band | Professional Music</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#000;
+  --white:#fff;
+  --muted:#d8d8d8;
+  --blue:#087ff5;
+  --blue2:#1745ce;
+  --yellow:#ffec13;
+  --line:rgba(255,255,255,.62);
+  --max:1600px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#000}
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit}
+img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
+::selection{background:var(--blue);color:#fff}
+
+.page{
+  width:100%;
+  background:#000;
+}
+.slide{
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.03);
+}
+.slide-inner{
+  position:relative;
+  z-index:2;
+  width:min(var(--max),100%);
+  min-height:100vh;
+  margin:0 auto;
+}
+.kicker{
+  display:inline-block;
+  padding:.42rem 1.4rem;
+  border-radius:999px;
+  background:var(--yellow);
+  color:#111;
+  font-weight:500;
+  letter-spacing:.04em;
+}
+.display{
+  margin:0;
+  font-size:clamp(3rem,5vw,5.2rem);
+  line-height:.98;
+  font-weight:900;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+}
+.body-copy{
+  font-size:clamp(1rem,1.42vw,1.55rem);
+  line-height:1.45;
+}
+.blue-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:240px;
+  border:2px solid var(--blue);
+  border-radius:999px;
+  padding:.55rem 1.4rem;
+  font-size:clamp(1rem,1.35vw,1.45rem);
+  white-space:nowrap;
+}
+
+/* HERO */
+.hero{
+  min-height:100svh;
+  background:#000;
+}
+.hero-photo{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 45%;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.06) 35%,rgba(0,0,0,.15) 63%,rgba(0,0,0,.78) 100%),
+    linear-gradient(90deg,rgba(0,0,0,.45),transparent 24%,transparent 78%,rgba(0,0,0,.38));
+  z-index:1;
+  pointer-events:none;
+}
+.corner-lines{
+  position:absolute;
+  z-index:3;
+  width:410px;height:110px;
+  top:0;left:0;
+  pointer-events:none;
+}
+.corner-lines::before,
+.corner-lines::after,
+.corner-lines span{
+  content:"";
+  position:absolute;
+  left:-52px;
+  width:395px;
+  height:78px;
+  border-right:1px solid rgba(255,255,255,.8);
+  border-bottom:1px solid rgba(255,255,255,.8);
+  border-radius:0 0 70px 0;
+}
+.corner-lines::before{top:-47px}
+.corner-lines span{top:-22px}
+.corner-lines::after{top:3px}
+.brand-lockup{
+  position:absolute;
+  z-index:3;
+  top:16%;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  color:var(--blue);
+  white-space:nowrap;
+}
+.brand-g{
+  font-size:clamp(7rem,11vw,12rem);
+  line-height:.72;
+  font-weight:300;
+  letter-spacing:-.08em;
+}
+.brand-name{
+  font-size:clamp(2.5rem,4vw,4.75rem);
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-.035em;
+  margin-left:.25rem;
+}
+.hero-caption{
+  position:absolute;
+  z-index:3;
+  left:3.5%;
+  bottom:7.5%;
+  font-size:clamp(1rem,1.4vw,1.55rem);
+  line-height:1.28;
+}
+.hero-pills{
+  position:absolute;
+  z-index:3;
+  right:3.5%;
+  bottom:7.8%;
+  display:flex;
+  gap:1.25rem;
+}
+
+/* BAND INFORMATION */
+.band-info .slide-inner{
+  display:grid;
+  grid-template-columns:29% 71%;
+  padding:5.5vh 3.2vw;
+  gap:2.4vw;
+}
+.band-side{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  padding-top:1.5vh;
+}
+.small-brand{
+  display:flex;
+  align-items:center;
+  color:var(--blue);
+  margin-bottom:8vh;
+}
+.small-brand .brand-g{font-size:clamp(5rem,8vw,8.8rem)}
+.small-brand .brand-name{font-size:clamp(1.65rem,2.65vw,3rem)}
+.abstract-sax{
+  position:relative;
+  width:150px;height:250px;
+  margin:0 0 6vh 1.3vw;
+}
+.abstract-sax .neck{
+  position:absolute;left:30px;top:5px;width:42px;height:160px;
+  border-radius:36px;
+  border:20px solid transparent;
+  border-left-color:#f5db43;
+  border-bottom-color:#1158dd;
+  transform:rotate(-12deg);
+  filter:drop-shadow(0 12px 14px rgba(0,0,0,.35));
+}
+.abstract-sax .bell{
+  position:absolute;left:72px;bottom:16px;
+  width:80px;height:98px;border-radius:15% 15% 52% 52%;
+  background:linear-gradient(150deg,#ffe360 0%,#ffa536 28%,#8267ff 62%,#0f54d7 100%);
+  transform:rotate(14deg);
+}
+.abstract-sax .bell::before{
+  content:"";
+  position:absolute;left:13px;top:-12px;width:58px;height:26px;border-radius:50%;
+  background:#061524;border:8px solid #6aa8ff;
+}
+.band-side h2{
+  margin:auto 0 5vh;
+  font-size:clamp(2.6rem,4.2vw,4.6rem);
+  line-height:1.02;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.band-side .blue-pill{width:max-content;margin-bottom:1.1rem}
+.members-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:repeat(2,minmax(0,1fr));
+  gap:1.65vw;
+  align-self:center;
+}
+.member-card{
+  position:relative;
+  min-height:42vh;
+  overflow:hidden;
+  background:#111;
+}
+.member-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 25%;
+  transition:transform .45s ease;
+}
+.member-card:hover img{transform:scale(1.025)}
+.member-card::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.22) 61%,#000 100%);
+  pointer-events:none;
+}
+.member-label{
+  position:absolute;
+  z-index:2;
+  left:6%;
+  bottom:7%;
+}
+.member-label .kicker{font-size:.72rem;padding:.28rem .9rem}
+.member-label h3{
+  margin:.55rem 0 0;
+  font-size:clamp(1.35rem,1.8vw,2rem);
+  line-height:1;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+/* PROFILES */
+.profile .slide-inner{
+  display:grid;
+  grid-template-columns:46% 54%;
+}
+.profile.reverse .slide-inner{
+  grid-template-columns:50% 50%;
+}
+.profile-media{
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+}
+.profile-media img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.profile:not(.reverse) .profile-media::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent 73%,#000 100%);
+  pointer-events:none;
+}
+.profile.reverse .profile-media{order:2}
+.profile.reverse .profile-media::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,#000 0%,transparent 27%);
+  pointer-events:none;
+}
+.profile-copy{
+  position:relative;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:7vh 5vw 7vh 1.7vw;
+}
+.profile.reverse .profile-copy{
+  order:1;
+  padding:7vh 2vw 7vh 6vw;
+}
+.profile-copy h2{
+  margin:4vh 0 .6rem;
+  font-size:clamp(3rem,5vw,5.2rem);
+  line-height:.95;
+  font-weight:900;
+  letter-spacing:-.04em;
+  text-transform:uppercase;
+}
+.profile-roleline{
+  font-size:clamp(1rem,1.55vw,1.7rem);
+  line-height:1.35;
+  font-weight:800;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:.55rem 0;
+  margin-bottom:2.25rem;
+}
+.profile-list{
+  margin:0;
+  padding-left:1.65rem;
+  font-size:clamp(1rem,1.35vw,1.46rem);
+  line-height:1.62;
+  color:#f1f1f1;
+}
+.profile-list li{margin:.45rem 0}
+
+/* Generic text slides */
+.content-slide .slide-inner{
+  padding:8vh 13vw;
+}
+.content-slide h2{
+  margin:0 0 7vh;
+  font-size:clamp(3.2rem,5vw,5.4rem);
+  line-height:1;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+/* ELEVATOR */
+.pitch .slide-inner{padding:8vh 13vw}
+.pitch h2{margin-bottom:9vh}
+.pitch-intro{
+  max-width:1200px;
+  font-size:clamp(1rem,1.38vw,1.5rem);
+  line-height:1.4;
+}
+.pitch-bottom{
+  display:grid;
+  grid-template-columns:330px 1fr 310px;
+  gap:5vw;
+  align-items:center;
+  margin-top:8vh;
+}
+.genre-box{
+  border:1px solid rgba(255,255,255,.65);
+  min-height:420px;
+  padding:3rem 3.5rem;
+}
+.genre-box p{font-size:1.25rem;margin:0 0 2.5rem}
+.genre-box strong{
+  display:block;
+  font-size:1.4rem;
+  line-height:2.55;
+}
+.record-art{
+  position:relative;
+  width:280px;height:280px;
+  margin:auto;
+}
+.record-art .disc{
+  position:absolute;left:0;bottom:0;
+  width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,
+    #ffed11 0 9px,#02132e 10px 31px,#0b5ee7 32px 50px,#4089ff 51px 69px,#54d0e6 70px 88px,#1244d0 89px 100%);
+}
+.record-art::before,
+.record-art::after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(255,255,255,.65);
+  border-left:0;
+  border-bottom:0;
+  border-radius:0 70px 0 0;
+  left:145px;bottom:5px;
+}
+.record-art::before{width:130px;height:200px}
+.record-art::after{width:90px;height:160px}
+.gold-dot{
+  width:125px;height:125px;border-radius:50%;
+  background:linear-gradient(145deg,#ecfaff 5%,#ae9641 68%,#765d09);
+  margin:0 auto;
+}
+
+/* USP */
+.usp{
+  background-image:
+    linear-gradient(90deg,rgba(9,77,177,.92),rgba(116,219,215,.58)),
+    url('assets/usp-bg.jpg');
+  background-size:cover;
+  background-position:center;
+}
+.usp .slide-inner{padding:9vh 13vw}
+.usp h2{
+  font-size:clamp(3.4rem,5.4vw,5.7rem);
+  margin:0 0 12vh;
+}
+.usp-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:4vw;
+}
+.usp-grid h3{
+  font-size:clamp(1.4rem,2vw,2.1rem);
+  line-height:1.35;
+  text-transform:uppercase;
+  margin:0;
+}
+.usp-note{
+  position:absolute;
+  left:13vw;right:13vw;bottom:13vh;
+  font-size:clamp(1rem,1.38vw,1.52rem);
+  line-height:1.45;
+}
+
+/* CUSTOM SETLIST */
+.setlist .slide-inner{padding:8vh 13vw}
+.setlist h2{margin-bottom:2.5rem}
+.setlist h4{
+  font-size:clamp(1rem,1.35vw,1.45rem);
+  margin:0 0 6vh;
+}
+.setlist-copy{
+  max-width:830px;
+  font-size:clamp(1rem,1.35vw,1.45rem);
+  line-height:1.45;
+}
+.collage{
+  position:absolute;
+  left:1vw;
+  bottom:1vh;
+  width:37%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.collage img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+.rings{
+  position:absolute;
+  width:680px;height:680px;
+  right:-170px;bottom:-380px;
+  border-radius:50%;
+  background:radial-gradient(circle at center,
+    var(--yellow) 0 48px,
+    #07172d 49px 145px,
+    #4cc2eb 146px 220px,
+    #1657dc 221px 308px,
+    #58cce8 309px 100%);
+}
+.rings::before,
+.rings::after{
+  content:"";
+  position:absolute;inset:85px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.75);
+}
+.rings::after{inset:165px}
+.horn-mini{
+  position:absolute;
+  right:17%;
+  top:8%;
+  width:125px;height:95px;
+  transform:rotate(14deg);
+}
+.horn-mini .tube{
+  position:absolute;left:0;top:28px;width:90px;height:28px;border-radius:28px;
+  border:17px solid #7f8bea;border-top-color:#f44336;border-right-color:#2245b2;
+}
+.horn-mini .bell{
+  position:absolute;right:0;top:7px;width:52px;height:74px;
+  background:linear-gradient(150deg,#ffe564,#315ed0 58%);
+  clip-path:polygon(0 35%,100% 0,100% 100%,0 65%);
+}
+
+/* ENERGY */
+.energy .slide-inner{
+  padding:0 13vw 7vh;
+}
+.energy-photo{
+  width:74%;
+  height:50vh;
+  margin:0 auto;
+  object-fit:cover;
+  object-position:center;
+}
+.energy-copy{
+  margin-top:4vh;
+  max-width:900px;
+}
+.energy-copy h2{
+  font-size:clamp(3.3rem,5.3vw,5.8rem);
+  margin:0 0 4vh;
+  line-height:1.02;
+}
+.energy-copy p{
+  font-size:clamp(1rem,1.35vw,1.45rem);
+  line-height:1.45;
+}
+.drum-art{
+  position:absolute;
+  right:10vw;bottom:12vh;
+  width:210px;height:150px;
+  transform:rotate(-9deg);
+}
+.drum-art .body{
+  position:absolute;left:30px;top:35px;width:150px;height:105px;
+  background:linear-gradient(135deg,#f8d837,#fe6d25 40%,#ef3761 75%);
+  border-radius:18px 18px 35px 35px;
+  border-bottom:10px solid #6c8dec;
+}
+.drum-art .top{
+  position:absolute;left:17px;top:20px;width:177px;height:55px;border-radius:50%;
+  background:radial-gradient(ellipse,#fa3657 0 21%,#ff7b20 22% 42%,#f3d344 43% 58%,#6e7ddd 59% 72%,#3d56bf 73%);
+}
+.drum-art::before,
+.drum-art::after{
+  content:"";
+  position:absolute;
+  width:115px;height:6px;border-radius:999px;
+  background:#c5d7ff;
+  top:5px;right:-28px;
+  transform:rotate(-36deg);
+}
+.drum-art::after{top:24px;right:-40px;transform:rotate(-7deg)}
+
+/* PROOF */
+.proof{
+  background-image:
+    linear-gradient(90deg,rgba(8,73,164,.91),rgba(123,218,215,.57)),
+    url('assets/proof-bg.jpg');
+  background-size:cover;
+  background-position:center;
+}
+.proof .slide-inner{padding:9vh 13vw}
+.proof h2{
+  margin:0;
+  font-size:clamp(3.5rem,5.5vw,5.8rem);
+}
+.proof h4{
+  font-size:clamp(1rem,1.35vw,1.45rem);
+  margin:3vh 0 6vh;
+}
+.proof-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  max-width:930px;
+  gap:6vw;
+  font-size:clamp(1rem,1.35vw,1.45rem);
+  line-height:1.45;
+}
+
+/* CONTACT */
+.contact .slide-inner{
+  padding:9vh 13vw;
+}
+.contact-title{
+  max-width:1120px;
+  font-size:clamp(2.8rem,4.4vw,4.6rem);
+  line-height:1.22;
+  font-weight:900;
+  margin:12vh 0 9vh;
+}
+.contact-box{
+  position:relative;
+  border:1px solid rgba(255,255,255,.65);
+  min-height:250px;
+  display:grid;
+  grid-template-columns:58% 42%;
+  align-items:center;
+  padding:2.4rem 2.5rem;
+}
+.contact-box h3{
+  font-size:clamp(1.8rem,2.7vw,3rem);
+  margin:0 0 .6rem;
+}
+.phone{
+  font-size:clamp(1.55rem,2.35vw,2.65rem);
+  text-decoration:none;
+}
+.demo-button{
+  justify-self:center;
+  min-width:310px;
+  min-height:125px;
+  padding:1rem 2rem;
+  border:0;
+  background:#fff;
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  font:inherit;
+  cursor:pointer;
+}
+.demo-button strong{
+  text-align:left;
+  font-size:clamp(1.5rem,2vw,2.25rem);
+  line-height:1.1;
+}
+.play-icon{
+  width:0;height:0;
+  border-top:19px solid transparent;
+  border-bottom:19px solid transparent;
+  border-left:31px solid #000;
+}
+.contact-orbit{
+  position:absolute;
+  right:-100px;bottom:-180px;
+  width:380px;height:610px;
+  border:1px solid #fff;
+  border-radius:190px 0 0 0;
+  border-right:0;border-bottom:0;
+}
+.contact-orbit::before,
+.contact-orbit::after{
+  content:"";
+  position:absolute;
+  border:1px solid #fff;
+  border-right:0;border-bottom:0;
+  border-radius:160px 0 0 0;
+}
+.contact-orbit::before{inset:40px 0 0 40px}
+.contact-orbit::after{inset:80px 0 0 80px}
+.contact-dot{
+  position:absolute;
+  width:220px;height:220px;border-radius:50%;
+  left:-110px;top:-105px;
+  background:linear-gradient(145deg,#eefaff 0%,#b49b4c 65%,#71590b 100%);
+}
+
+/* mobile */
+@media (max-width: 1000px){
+  .slide,.slide-inner{min-height:auto}
+  .hero{min-height:100svh}
+  .hero .slide-inner{min-height:100svh}
+  .corner-lines{transform:scale(.65);transform-origin:top left}
+  .brand-lockup{top:18%;width:90%;justify-content:center}
+  .brand-g{font-size:24vw}
+  .brand-name{font-size:9vw}
+  .hero-caption{left:7%;bottom:8%}
+  .hero-pills{display:none}
+
+  .band-info .slide-inner{
+    display:block;
+    padding:4rem 1.2rem;
+  }
+  .band-side{padding:0}
+  .small-brand{margin-bottom:2.5rem}
+  .abstract-sax{display:none}
+  .band-side h2{margin:0 0 2rem}
+  .band-side .blue-pill{display:none}
+  .members-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+    gap:1rem;
+  }
+  .member-card{min-height:360px}
+
+  .profile .slide-inner,
+  .profile.reverse .slide-inner{
+    display:flex;
+    flex-direction:column;
+  }
+  .profile-media,
+  .profile.reverse .profile-media{
+    order:1;
+    min-height:62vh;
+  }
+  .profile-copy,
+  .profile.reverse .profile-copy{
+    order:2;
+    padding:3.2rem 1.4rem 4rem;
+  }
+  .profile-media::after,
+  .profile.reverse .profile-media::after{
+    background:linear-gradient(180deg,transparent 62%,#000 100%) !important;
+  }
+  .profile-copy h2{margin-top:1.5rem}
+  .profile-roleline{font-size:1rem}
+  .profile-list{font-size:1rem}
+
+  .pitch .slide-inner,
+  .usp .slide-inner,
+  .setlist .slide-inner,
+  .proof .slide-inner,
+  .contact .slide-inner{
+    padding:4.5rem 1.4rem;
+  }
+  .pitch h2,.content-slide h2{margin-bottom:2.5rem}
+  .pitch-bottom{
+    grid-template-columns:1fr;
+    gap:2rem;
+    margin-top:3rem;
+  }
+  .genre-box{min-height:auto}
+  .record-art,.gold-dot{display:none}
+
+  .usp{min-height:720px}
+  .usp h2{margin-bottom:4rem}
+  .usp-grid{grid-template-columns:1fr;gap:2rem}
+  .usp-note{
+    position:static;
+    margin-top:4rem;
+  }
+
+  .setlist{min-height:860px}
+  .collage{
+    position:relative;
+    left:auto;bottom:auto;
+    margin-top:3rem;
+    width:100%;
+  }
+  .rings{width:430px;height:430px;right:-230px;bottom:-230px}
+  .horn-mini{display:none}
+
+  .energy .slide-inner{padding-bottom:4rem}
+  .energy-photo{width:100%;height:46vh}
+  .energy-copy{padding:0 1.4rem}
+  .drum-art{display:none}
+
+  .proof{min-height:690px}
+  .proof-grid{grid-template-columns:1fr;gap:2rem}
+
+  .contact-title{margin:2rem 0 3rem}
+  .contact-box{
+    grid-template-columns:1fr;
+    gap:2rem;
+    min-height:auto;
+    padding:2rem;
+  }
+  .demo-button{justify-self:start;min-width:min(100%,320px)}
+  .contact-orbit{opacity:.35}
+  .contact-dot{width:130px;height:130px;left:-65px;top:-65px}
+}
+
+@media (max-width:560px){
+  .members-grid{grid-template-columns:1fr}
+  .member-card{min-height:500px}
+  .blue-pill{min-width:0}
+  .contact-box{padding:1.4rem}
+}
+
+/* Optional desktop slide-like feel */
+@media (min-width:1200px){
+  body{scroll-snap-type:y proximity}
+  .slide{scroll-snap-align:start}
+}
+
+/* =========================
+   SUBTLE SCROLL MOTION
+   ========================= */
+
+/* Initial reveal state */
+.motion-reveal {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition:
+    opacity .8s cubic-bezier(.2,.65,.3,1),
+    transform .8s cubic-bezier(.2,.65,.3,1);
+  will-change: opacity, transform;
+}
+
+.motion-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Slightly softer reveal for large headings */
+.motion-title {
+  opacity: 0;
+  transform: translate3d(0, 34px, 0);
+  letter-spacing: .01em;
+  transition:
+    opacity .9s cubic-bezier(.2,.65,.3,1),
+    transform .9s cubic-bezier(.2,.65,.3,1),
+    letter-spacing .9s cubic-bezier(.2,.65,.3,1);
+  will-change: opacity, transform;
+}
+
+.motion-title.is-visible {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  letter-spacing: inherit;
+}
+
+/* Photo reveal: tiny zoom + fade only */
+.motion-image {
+  opacity: 0;
+  transform: scale(1.035);
+  transition:
+    opacity 1s cubic-bezier(.2,.65,.3,1),
+    transform 1.15s cubic-bezier(.2,.65,.3,1);
+  will-change: opacity, transform;
+}
+
+.motion-image.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children, kept subtle */
+.motion-stagger > * {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity .7s cubic-bezier(.2,.65,.3,1),
+    transform .7s cubic-bezier(.2,.65,.3,1);
+}
+
+.motion-stagger.is-visible > * {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.motion-stagger.is-visible > *:nth-child(1){transition-delay:.03s}
+.motion-stagger.is-visible > *:nth-child(2){transition-delay:.09s}
+.motion-stagger.is-visible > *:nth-child(3){transition-delay:.15s}
+.motion-stagger.is-visible > *:nth-child(4){transition-delay:.21s}
+.motion-stagger.is-visible > *:nth-child(5){transition-delay:.27s}
+.motion-stagger.is-visible > *:nth-child(6){transition-delay:.33s}
+.motion-stagger.is-visible > *:nth-child(7){transition-delay:.39s}
+.motion-stagger.is-visible > *:nth-child(8){transition-delay:.45s}
+
+/* Very gentle parallax on large photos */
+.parallax-photo {
+  --parallax-y: 0px;
+  transform: translate3d(0, var(--parallax-y), 0) scale(1.015);
+  will-change: transform;
+}
+
+/* Hero gets a slow cinematic entrance */
+.hero-photo {
+  animation: heroIntro 1.5s cubic-bezier(.2,.65,.3,1) both;
+}
+
+@keyframes heroIntro {
+  from { opacity: 0; transform: scale(1.045); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.brand-lockup {
+  animation: brandIntro 1s .15s cubic-bezier(.2,.65,.3,1) both;
+}
+
+.hero-caption {
+  animation: fadeUpIntro .85s .42s cubic-bezier(.2,.65,.3,1) both;
+}
+
+.hero-pills {
+  animation: fadeUpIntro .85s .55s cubic-bezier(.2,.65,.3,1) both;
+}
+
+@keyframes brandIntro {
+  from { opacity: 0; transform: translate(-50%, 18px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes fadeUpIntro {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover remains restrained and professional */
+.member-card {
+  transition: transform .35s cubic-bezier(.2,.65,.3,1),
+              box-shadow .35s cubic-bezier(.2,.65,.3,1);
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.35);
+}
+
+.member-card img {
+  transition: transform .55s cubic-bezier(.2,.65,.3,1);
+}
+
+.member-card:hover img {
+  transform: scale(1.035);
+}
+
+.blue-pill,
+.kicker,
+.demo-button {
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background-color .25s ease,
+    color .25s ease;
+}
+
+.blue-pill:hover {
+  transform: translateY(-2px);
+  border-color: #55aaff;
+}
+
+.kicker:hover {
+  transform: translateY(-1px);
+}
+
+.demo-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Decorative shapes breathe, but almost imperceptibly */
+.record-art,
+.gold-dot,
+.horn-mini,
+.drum-art {
+  animation: softFloat 6s ease-in-out infinite;
+}
+
+.gold-dot { animation-delay: -1.4s; }
+.horn-mini { animation-delay: -2.2s; }
+.drum-art { animation-delay: -3s; }
+
+@keyframes softFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* Mobile: reduce motion intensity */
+@media (max-width: 900px) {
+  .motion-reveal { transform: translate3d(0, 18px, 0); }
+  .motion-title  { transform: translate3d(0, 22px, 0); }
+  .parallax-photo { transform: none !important; }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+
+  .motion-reveal,
+  .motion-title,
+  .motion-image,
+  .motion-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .parallax-photo {
+    transform: none !important;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<main class="page">
+
+<!-- 01 / HERO -->
+<section class="slide hero" id="home">
+  <img class="hero-photo" src="assets/hero.jpg" alt="Gaudete Band" draggable="true">
+  <div class="corner-lines"><span></span></div>
+  <div class="slide-inner">
+    <div class="brand-lockup" aria-label="Gaudete Band">
+      <span class="brand-g">G</span><span class="brand-name">AUDETE BAND</span>
+    </div>
+    <div class="hero-caption">Âm nhạc chuyên nghiệp<br>mang đến cảm xúc trọn vẹn</div>
+    <div class="hero-pills">
+      <span class="blue-pill">Professional Music</span>
+      <span class="blue-pill">Complete Emotion</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 / BAND INFORMATION -->
+<section class="slide band-info" id="band-information">
+  <div class="slide-inner">
+    <aside class="band-side">
+      <div class="small-brand">
+        <span class="brand-g">G</span><span class="brand-name">AUDETE BAND</span>
+      </div>
+      <div class="abstract-sax" aria-hidden="true"><span class="neck"></span><span class="bell"></span></div>
+      <h2>BAND<br>INFOMATION</h2>
+      <span class="blue-pill">Professional Music</span>
+      <span class="blue-pill">Complete Emotion</span>
+    </aside>
+
+    <div class="members-grid">
+      <article class="member-card">
+        <img src="assets/thuy-dieu.jpg" alt="Thuỳ Diệu - Band Manager" draggable="true">
+        <div class="member-label"><span class="kicker">Band Manager</span><h3>Thuỳ Diệu</h3></div>
+      </article>
+      <article class="member-card">
+        <img src="assets/hoang-nguyen.jpg" alt="Hoàng Nguyễn - Bandleader" draggable="true">
+        <div class="member-label"><span class="kicker">Bandleader</span><h3>Hoàng Nguyễn</h3></div>
+      </article>
+      <article class="member-card">
+        <img src="assets/le-chi-hai.jpg" alt="Lê Chí Hải - Drummer" draggable="true">
+        <div class="member-label"><span class="kicker">Drummer</span><h3>Lê Chí Hải</h3></div>
+      </article>
+      <article class="member-card">
+        <img src="assets/tai-vu.jpg" alt="Tài Vũ - Keyboardist" draggable="true">
+        <div class="member-label"><span class="kicker">Keyboardist</span><h3>Tài Vũ</h3></div>
+      </article>
+      <article class="member-card">
+        <img src="assets/serena.jpg" alt="Serena - Vocalist" draggable="true">
+        <div class="member-label"><span class="kicker">Vocalist</span><h3>Serena</h3></div>
+      </article>
+      <article class="member-card">
+        <img src="assets/quoc-thong.jpg" alt="Quốc Thống - Keyboardist" draggable="true">
+        <div class="member-label"><span class="kicker">Keyboardist</span><h3>Quốc Thống</h3></div>
+      </article>
+      <article class="member-card">
+        <img src="assets/duc-tri.jpg" alt="Đức Trí - Guitarist" draggable="true">
+        <div class="member-label"><span class="kicker">Guitarist</span><h3>Đức Trí</h3></div>
+      </article>
+      <article class="member-card">
+        <img src="assets/ly-bui.jpg" alt="Ly Bùi - Bassist" draggable="true">
+        <div class="member-label"><span class="kicker">Bassist</span><h3>Ly Bùi</h3></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 / HOANG NGUYEN -->
+<section class="slide profile" id="hoang-nguyen">
+  <div class="slide-inner">
+    <div class="profile-media"><img src="assets/profile-hoang.jpg" alt="Hoàng Nguyễn" draggable="true"></div>
+    <div class="profile-copy">
+      <div><span class="kicker">Bandleader</span></div>
+      <h2>HOÀNG NGUYỄN</h2>
+      <div class="profile-roleline">Music Arranger - Teacher - Keyboardist - Pianist</div>
+      <ul class="profile-list">
+        <li>Principal Pianist SOV Choir</li>
+        <li>The Keyboardist of the Cantus Orchestra</li>
+        <li>Co-founder + Arranger at Gaudete Music</li>
+        <li>Working as a freelancer at events and live shows</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04 / TAI VU -->
+<section class="slide profile" id="tai-vu">
+  <div class="slide-inner">
+    <div class="profile-media"><img src="assets/profile-tai.jpg" alt="Tài Vũ" draggable="true"></div>
+    <div class="profile-copy">
+      <div><span class="kicker">Keyboardist</span></div>
+      <h2>TÀI VŨ</h2>
+      <div class="profile-roleline">Music Arranger - Teacher - Keyboardist - Pianists</div>
+      <ul class="profile-list">
+        <li>Variety of genres, Classical, Modern. Especially EDM</li>
+        <li>Work at major bar lounge in HCMC</li>
+        <li>Working as a freelancer at events and live shows</li>
+        <li>Gaudete's Keyboardist</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 / SERENA -->
+<section class="slide profile" id="serena">
+  <div class="slide-inner">
+    <div class="profile-media"><img src="assets/profile-serena.jpg" alt="Serena Thuy Tien" draggable="true"></div>
+    <div class="profile-copy">
+      <div><span class="kicker">Vocalist</span></div>
+      <h2>SERENA THUY TIEN</h2>
+      <div class="profile-roleline">Vocalist – Pianist – Vocal coach - Music teacher<br>Composer – Arranger - Produce</div>
+      <ul class="profile-list">
+        <li>Graduated as valedictorian in Vocal Performance, Jazz-Pop-Rock at Ho Chi Minh City Conservatory of Music</li>
+        <li>Vocalist for the concert series "Once Upon a Time"</li>
+        <li>Vocalist for the Attack on Titan Devotion film concert series</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 06 / LE CHI HAI -->
+<section class="slide profile reverse" id="le-chi-hai">
+  <div class="slide-inner">
+    <div class="profile-media"><img src="assets/profile-chihai.jpg" alt="Lê Chí Hải" draggable="true"></div>
+    <div class="profile-copy">
+      <div><span class="kicker">Drummer</span></div>
+      <h2>LÊ CHÍ HẢI</h2>
+      <ul class="profile-list">
+        <li>Gaudete Band’s drummer, Poseidose band’s drummer</li>
+        <li>Specializes in Morden Rock music</li>
+        <li>Won on top award at the Rock Việt</li>
+        <li>Debut album “Ký Ức trả lại” - 2024</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 07 / LY BUI -->
+<section class="slide profile reverse" id="ly-bui">
+  <div class="slide-inner">
+    <div class="profile-media"><img src="assets/profile-ly.jpg" alt="Ly Bùi" draggable="true"></div>
+    <div class="profile-copy">
+      <div><span class="kicker">Bassist</span></div>
+      <h2>LY BÙI</h2>
+      <ul class="profile-list">
+        <li>Gaudete Band’s bassist, Poseidose band’s bassist</li>
+        <li>Specializes in Morden Rock music,</li>
+        <li>Alternative, Nu metal, Hard rock.</li>
+        <li>Won on top award at the Rock Việt</li>
+        <li>Debut album “Ký Ức trả lại” - 2024</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 08 / QUOC THONG -->
+<section class="slide profile reverse" id="quoc-thong">
+  <div class="slide-inner">
+    <div class="profile-media"><img src="assets/profile-quoc.jpg" alt="Quốc Thống" draggable="true"></div>
+    <div class="profile-copy">
+      <div><span class="kicker">Bandleader</span></div>
+      <h2>QUỐC THỐNG</h2>
+      <div class="profile-roleline">Music Arranger - Teacher - Keyboardist - Pianist</div>
+      <ul class="profile-list">
+        <li>The keyboardist in Gaudete band</li>
+        <li>Variety of genres, Classical - Modern</li>
+        <li>Working as a freelancer at events and live shows</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 09 / DUC TRI -->
+<section class="slide profile reverse" id="duc-tri">
+  <div class="slide-inner">
+    <div class="profile-media"><img src="assets/profile-ductri.jpg" alt="Đức Trí" draggable="true"></div>
+    <div class="profile-copy">
+      <div><span class="kicker">Guitarist</span></div>
+      <h2>ĐỨC TRÍ</h2>
+      <ul class="profile-list">
+        <li>Gaudete Band’s Guitarist - Raditoriband’s Guitarist</li>
+        <li>Guitarist in single Già, Single Balo, Mv Rơi</li>
+        <li>Pop, Rock, Jazz, Smooth jazz, Fusion,</li>
+        <li>Funk, Dân ca đương đại</li>
+        <li>Variety of genres, Classical, Modern</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 10 / ELEVATOR PITCH -->
+<section class="slide content-slide pitch" id="elevator-pitch">
+  <div class="slide-inner">
+    <h2>ELEVATOR PITCH</h2>
+    <div class="pitch-intro">
+      - Gaudete là nhóm nhạc 7 thành viên (Piano, Guitar lead, Drums, 2 Keyboards, Bass, Vocal) hoạt động chuyên nghiệp, kinh nghiệm tập trung phục vụ các sự kiện cao cấp của doanh nghiệp (Gala Dinner, Year End Party, Lễ ra mắt sản phẩm, hội nghị khách hàng).
+    </div>
+    <div class="pitch-bottom">
+      <div class="genre-box">
+        <p>Thể loại chủ đạo:</p>
+        <strong>Modern Pop/Soul</strong>
+        <strong>Funk &nbsp;&nbsp;&nbsp;&nbsp; Ballad</strong>
+        <strong>Disco &nbsp;&nbsp;&nbsp; Rock</strong>
+      </div>
+      <div>
+        <p class="body-copy">Chúng tôi luôn điều chỉnh phong cách biểu diễn để phù hợp với môi trường chuyên nghiệp và đa dạng đối tượng khách mời.</p>
+        <div class="record-art"><div class="disc"></div></div>
+      </div>
+      <div><div class="gold-dot"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 / USP -->
+<section class="slide usp" id="usp">
+  <div class="slide-inner">
+    <h2 class="display">ĐIỂM NHẤN &amp; GIÁ TRỊ ĐỘC ĐÁO</h2>
+    <div class="usp-grid">
+      <h3>USP<br>CAM KẾT VỚI HR</h3>
+      <h3>CHUYÊN NGHIỆP<br>&amp; KỶ LUẬT</h3>
+      <h3>TUYỆT ĐỐI<br>ĐÚNG GIỜ</h3>
+    </div>
+    <div class="usp-note">Cam kết tuân thủ nghiêm ngặt lịch trình Soundcheck, tổng duyệt và biểu diễn. Chúng tôi hiểu rõ tầm quan trọng của sự chuyên nghiệp trong các sự kiện Corporate.</div>
+  </div>
+</section>
+
+<!-- 12 / CUSTOM SETLIST -->
+<section class="slide content-slide setlist" id="custom-setlist">
+  <div class="slide-inner">
+    <h2>CUSTOM SETLIST</h2>
+    <h4>Khả năng Tùy biến Nội dung</h4>
+    <p class="setlist-copy">Chúng tôi sẵn sàng biên soạn Setlist đặc biệt (bao gồm Cover, Mashup) theo chủ đề sự kiện, thông điệp truyền thông của công ty, hoặc yêu cầu riêng về ngôn ngữ/thể loại.</p>
+
+    <div class="collage" aria-label="Hình ảnh biểu diễn">
+      <img src="assets/gallery-1.jpg" alt="Gaudete Band biểu diễn 1" draggable="true">
+      <img src="assets/gallery-2.jpg" alt="Gaudete Band biểu diễn 2" draggable="true">
+      <img src="assets/gallery-3.jpg" alt="Gaudete Band biểu diễn 3" draggable="true">
+      <img src="assets/gallery-4.jpg" alt="Gaudete Band biểu diễn 4" draggable="true">
+    </div>
+
+    <div class="horn-mini" aria-hidden="true"><div class="tube"></div><div class="bell"></div></div>
+    <div class="rings" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- 13 / ENERGY -->
+<section class="slide energy" id="energy">
+  <div class="slide-inner">
+    <img class="energy-photo" src="assets/energy-bg.jpg" alt="Gaudete Band biểu diễn trên sân khấu" draggable="true">
+    <div class="energy-copy">
+      <h2 class="display">KHẢ NĂNG KHUẤY ĐỘNG<br>XUẤT SẮC</h2>
+      <p>Gaudete không chỉ chơi nhạc dẫn dắt cảm xúc,<br>biến sự kiện thành một buổi tiệc âm nhạc thực thụ, khuyến khích sự gắn kết của nhân viên.</p>
+    </div>
+    <div class="drum-art" aria-hidden="true"><div class="body"></div><div class="top"></div></div>
+  </div>
+</section>
+
+<!-- 14 / PROOF OF CONCEPT -->
+<section class="slide proof" id="proof-of-concept">
+  <div class="slide-inner">
+    <h2>PROOF OF CONCEPT</h2>
+    <h4>Kinh nghiệm hợp tác doanh nghiệp</h4>
+    <div class="proof-grid">
+      <p>- Đối tác tiêu biểu: Đã biểu diễn thành công tại các tiệc cưới private. Công ty Terra Verde, hợp tác tại An Lâm Retreat.</p>
+      <p>- Các loại hình sự kiện đã thực hiện: Gala Dinner, Year End Party (YEP), Lễ ra mắt sản phẩm, Hội nghị Khách hàng (Client Conference).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 15 / CONTACT -->
+<section class="slide contact" id="contact">
+  <div class="slide-inner">
+    <div class="contact-dot" aria-hidden="true"></div>
+    <div class="contact-title">Hãy liên hệ với chúng tôi<br>ngay hôm nay để nhận tư vấn Setlist chi tiết<br>và Bảng Báo giá mới nhất (có bao gồm VAT).</div>
+
+    <div class="contact-box">
+      <div>
+        <h3>Liên hệ Booking</h3>
+        <a class="phone" href="tel:+84934027403">Diệu Diệu: (84) 934 027 403</a>
+      </div>
+      <button class="demo-button" id="video-demo" type="button">
+        <strong>Video<br>Demo</strong>
+        <span class="play-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="contact-orbit" aria-hidden="true"></div>
+  </div>
+</section>
+
+</main>
+
+<script>
+document.getElementById('video-demo').addEventListener('click', function () {
+  const videoUrl = ''; // Điền link YouTube / Vimeo / Google Drive vào đây.
+  if (videoUrl) {
+    window.open(videoUrl, '_blank', 'noopener');
+  } else {
+    alert('Chưa gắn link Video Demo. Bạn có thể điền URL vào biến videoUrl ở cuối file index.html.');
+  }
+});
+</script>
+
+<script>
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Add motion classes without changing editable content.
+  const titleSelectors = [
+    '.band-side h2',
+    '.profile-copy h2',
+    '.pitch h2',
+    '.usp h2',
+    '.setlist h2',
+    '.energy-copy h2',
+    '.proof h2',
+    '.contact-title'
+  ];
+
+  titleSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => el.classList.add('motion-title'));
+  });
+
+  [
+    '.profile-copy .kicker',
+    '.profile-roleline',
+    '.profile-list',
+    '.pitch-intro',
+    '.genre-box',
+    '.pitch-bottom .body-copy',
+    '.usp-note',
+    '.setlist h4',
+    '.setlist-copy',
+    '.energy-copy p',
+    '.proof h4',
+    '.proof-grid',
+    '.contact-box'
+  ].forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => el.classList.add('motion-reveal'));
+  });
+
+  [
+    '.members-grid',
+    '.usp-grid',
+    '.collage'
+  ].forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => el.classList.add('motion-stagger'));
+  });
+
+  document.querySelectorAll('.profile-media img, .energy-photo').forEach(img => {
+    img.classList.add('motion-image', 'parallax-photo');
+  });
+
+  if (prefersReduced) {
+    document.querySelectorAll('.motion-reveal,.motion-title,.motion-image,.motion-stagger')
+      .forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: '0px 0px -8% 0px'
+  });
+
+  document.querySelectorAll('.motion-reveal,.motion-title,.motion-image,.motion-stagger')
+    .forEach(el => observer.observe(el));
+
+  // Gentle parallax only on desktop.
+  const parallaxEls = [...document.querySelectorAll('.parallax-photo')];
+
+  if (window.matchMedia('(min-width: 901px)').matches && parallaxEls.length) {
+    let ticking = false;
+
+    const updateParallax = () => {
+      const vh = window.innerHeight;
+
+      parallaxEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        const normalized = (center - vh / 2) / vh;
+        const offset = Math.max(-18, Math.min(18, normalized * -18));
+        el.style.setProperty('--parallax-y', `${offset}px`);
+      });
+
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateParallax();
+  }
+})();
+</script>
+
+</body>
+</html>
